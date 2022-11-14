@@ -1,0 +1,39 @@
+.container {
+    padding-top: 5em;
+}
+.container .hdr-form {
+    margin-top: 2em;
+}
+.container .hdr-form input {
+    display: block;
+}
+
+.hdr-bg {
+    position: absolute;
+    bottom: 0;
+}
+
+.result-container .result__uploaded-image-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.result-container .result__uploaded-image-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.result-container .result__predicted-digit {
+    font-size: 18px;
+    font-weight: bold;
+}
+.result-container .result__predicted-digit span {
+    font-weight: normal;
+}
+.result-container #content {
+    display: none;
+}
+#result-container-loading {
+  text-align: center;
+}

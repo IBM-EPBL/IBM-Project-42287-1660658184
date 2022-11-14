@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Handwritten Digit Recognition</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/template.css') }}">
+</head>
+<body>
+
+
+</div>
+<div class="result-container container">
+  <div id="result-container-loading">
+    <h2 id="count">25</h2>
+    <div>Please wait, while we fetch the prediction results...</div>
+  </div>
+  <div id="content">
+    <div class="result__uploaded-image-title">Uploaded image:</div>
+    <img class="mt-3" src="{{ uploaded_img_file_path }}" alt="Uploaded image" width="300" height="300"/>
+    <div class="mt-5 result__predicted-digit">Predicted digit: <span>{{result}}</span></div>
+  </div>
+</div>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  var count = 25;
+  var x = setInterval(function() {
+    count--;
+    document.getElementById("count").innerHTML = count;
+    if (count < 0) {
+        clearInterval(x);
+        document.getElementById("result-container-loading").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }
+  }, 1000);
+</script>
+</html>
